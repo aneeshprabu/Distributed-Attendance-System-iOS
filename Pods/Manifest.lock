@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.0.0-rc.3)
+  - CLTypingLabel (0.4.0)
+  - Eureka (5.2.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.3)
+  - CLTypingLabel (~> 0.4.0)
+  - Eureka
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CLTypingLabel
+    - Eureka
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  CLTypingLabel: 95a7d1faf7e3d1d952cd11cb0491d17d80c50934
+  Eureka: 820a761c700f6eaab3b60758f138e0d9b99072b3
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 6094776ca957cab0a807cfe95c7b788b49f92cc0
+
+COCOAPODS: 1.8.4

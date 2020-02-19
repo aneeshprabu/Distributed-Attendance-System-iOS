@@ -1,0 +1,6 @@
+module Pods_Distributed_Attendance_System {
+  umbrella header "Pods-Distributed Attendance System-umbrella.h"
+
+  export *
+  module * { export * }
+}
