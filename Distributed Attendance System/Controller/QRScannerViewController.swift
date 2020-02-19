@@ -182,13 +182,15 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
         print("[QR Time] -> \(QRTime)")
         
         ///Calculating time difference between current time and QR generated time.
-        let r = CurrentTime.timeIntervalSince(QRTime)
-        print("Time inverval \(r)")
+        let r = Double(CurrentTime.timeIntervalSince(QRTime))
+        
         
         ///Checking if the difference is greater or less than the 5 seconds of QR creation
         if let offset = offsetString {
+            print("Got offset")
             if r > Double(5 * (offset+1)) {
-                let ac = UIAlertController(title: "QR Expired", message: "The scanned QR code has expired", preferredStyle: .alert)
+                print("Time inverval \(r) > \(Double(5 * (offset+1)))")
+                let ac = UIAlertController(title: "QR Expired", message: "Please scan another the QR code again!", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "OK", style: .default, handler: {
                     action in
                     
@@ -199,11 +201,9 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
             else {
                 /// Getting stored UserDefault "ID".
                  if let regNo : String = UserDefaults.standard.string(forKey: "ID") {
-                    
                     print("[Loaded UserDefault 'ID'] -> regNo")
                     let params : [String:String] = ["details" : code,
                                                     "reg_no" : regNo]
-                    
                     ///Post request for posting attendance.
                     let _ = AF.request(urlString, method: .post,
                                          parameters: params)
@@ -221,7 +221,11 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
                                     
                                     else {
                                         let ac = UIAlertController(title: "Attendance already posted", message: "You can't post attendance for yourself again!", preferredStyle: .alert)
-                                        ac.addAction(UIAlertAction(title: "OK", style: .default))
+                                        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: {
+                                            action in
+                                            
+                                            self.dismiss(animated: true, completion: nil)
+                                        } ))
                                         self.present(ac, animated: true)
                                     }
                                 }
@@ -243,6 +247,15 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
                 
                 }
             }
+        }
+        else {
+            let ac = UIAlertController(title: "QR Expired", message: "Please scan another the QR code again!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: {
+                action in
+                
+                self.dismiss(animated: true, completion: nil)
+            } ))
+            self.present(ac, animated: true)
         }
         
 
