@@ -46,10 +46,12 @@ class FaceIDViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         view.backgroundColor = UIColor.backgroundColor
         LockedText.textColor = .white
         descriptionText.textColor = .white
         
+        ///Getting registration number of the user from UserDefaults.
         UserDefaults.standard.set(true, forKey: "didViewLogin")
         print("[UserDefaultValue - FaceID] didViewLogin = \(UserDefaults.standard.bool(forKey: "didViewLogin"))")
         

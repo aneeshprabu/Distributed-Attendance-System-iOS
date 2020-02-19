@@ -94,13 +94,20 @@ class LoginViewController_Eureka: FormViewController {
                     
                     if let json = jsonResponse {
                         //Successful login
-                        if json["login"].stringValue == "success" {
+                        if json["login"].stringValue == "success true" {
                             
                             UserDefaults.standard.set(id, forKey: "ID") //setObject
                             UserDefaults.standard.set(true, forKey: "isLoggedIn")
                             UserDefaults.standard.synchronize()
                             
                             self.performSegue(withIdentifier: "goToFaceID", sender: self)
+                        }
+                        else if json["login"].stringValue == "success false"{
+                            let alert = UIAlertController(title: "Please verify you Email", message: "Check your email. We have sent an email with a link to verify your identiy.", preferredStyle: .alert)
+                            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                                          
+                            alert.addAction(action)
+                            self.present(alert, animated: true, completion: nil)
                         }
                             //Wrong information provided
                         else {
