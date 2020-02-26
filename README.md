@@ -2,6 +2,14 @@
 
 This is a project work in progress. (23 November 2019)
 
+Login, Register and Walkthrough:
+
+![](https://media.giphy.com/media/Kf5KAxQ9k2EWjmo2yA/giphy.gif)
+
+Biometrics and QR Scanner:
+
+![](https://media.giphy.com/media/f46pAfpT7kiOuLFvcM/giphy.gif)
+
 ## Project Background :
 
 The current medieval form of taking attendance is a slow, time-consuming and inept process. Rather than being a mere record keeping task, it has evolved to a rather cumbersome task due to the sheer amount of time it takes and the dedicated concentration that is expected from both the student and the teacher for doing said task in a smooth manner. Moreover, with the advancement in technology and sciences, our day to day lifestyle and the quality of our lives has improved tremendously making everything easier and more efficient for mankind. Despite this, the method of taking attendance has remained the same and has seen no improvement or changes at the slightest. Thus, there is a pressing need to make the whole task of taking attendance more trivial and efficient, and this can be achieved with the help of incorporating various technologies that have become a standard part of everyone’s day to day life such as mobile phones.
