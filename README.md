@@ -20,7 +20,7 @@ Being a college student who attends classes regularly, one thing that seems to b
 
 ## Architecture :
 
-![Architecture](//imgur.com/h4fRugt)
+![](https://imgur.com/h4fRugt)
 
 ## Project Description :
 
