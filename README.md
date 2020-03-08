@@ -20,8 +20,7 @@ Being a college student who attends classes regularly, one thing that seems to b
 
 ## Architecture :
 
-![Architecture](https://imgur.com/h4fRugt)
-<blockquote class="imgur-embed-pub" lang="en" data-id="h4fRugt"><a href="//imgur.com/h4fRugt"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![Architecture](//imgur.com/h4fRugt)
 
 ## Project Description :
 
